@@ -3,7 +3,7 @@ class Parent{
     void msg(){System.out.println("parent");}
 }
 public class TestExceptionChild  extends Parent{
-    void msg()throws IOException{
+    void msg(){
         System.out.println("TestExceptionChild");
     }
     public static void main(String args[]){
