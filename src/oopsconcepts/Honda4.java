@@ -1,4 +1,5 @@
 package oopsconcepts;
+// java program to illustrate Abstract classes
 abstract class Bike1{
     abstract void run();
 }
