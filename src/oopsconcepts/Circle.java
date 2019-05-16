@@ -1,5 +1,5 @@
 package oopsconcepts;
-// sample program to illustrate has-a relationhip
+// sample program to illustrate Has-a relationhip
 class Operation{
     int square(int n){
         return n*n;
