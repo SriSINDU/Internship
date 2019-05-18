@@ -15,7 +15,6 @@ public class FinallyEg {
     }
         finally
         {
-
             System.out.println("finally is always executed.");
         }
     }
