@@ -10,6 +10,7 @@ public class TestArrayList1 {
         ArrayList<String> ar1=new ArrayList<String>();
         ar1.add("bhanu");
         ar1.add("atirupavel");
+        ar.set(2,"Gaurav");
 
         Iterator itr=ar.iterator();
         while(itr.hasNext()){
@@ -25,5 +26,6 @@ public class TestArrayList1 {
         while(itr1.hasNext()){
             System.out.println(itr1.next());
         }
+        System.out.println("Is ArrayList Empty: "+ar.isEmpty());
     }
 }
