@@ -4,7 +4,7 @@ public class TestSleep extends Thread {
     public void run(){
         for(int i=0;i<3;i++){
             try{
-                Thread.sleep(0);
+                Thread.sleep(500);
             }
             catch(Exception e){
                 System.out.println("Exception caught "+e);
