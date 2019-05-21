@@ -16,6 +16,7 @@ public class ContactMain {
             ch=s.nextInt();
             switch (ch){
                 case 1:System.out.println("Enter the contact details: \nEnter the name  ");
+                        s.next();
                         name=s.nextLine();
                         System.out.println("Enter the phone number ");
                         num=s.nextLine();
