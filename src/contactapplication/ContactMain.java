@@ -73,16 +73,26 @@ public class ContactMain {
                             name=s.next();
                             if(multimap.containsKey(name)){
                                 ArrayList<String> arr=new ArrayList<String>();
+                                ArrayList<String> arr1=new ArrayList<String>();
+                                ArrayList<String> arr2=new ArrayList<String>();
                                 System.out.println("enter the new phone number");
-                                num=s.nextLine();
+                                num=s.next();
                                 System.out.println("enter the new email");
-                                email=s.nextLine();
+                                email=s.next();
                                 System.out.println("enter the new address");
-                                addr=s.nextLine();
+                                addr=s.next();
+                                arr1.add(name);
+                                arr2.add(name);
                                 arr.add(num);
                                 arr.add(email);
                                 arr.add(addr);
+                                arr1.add(num);
+                                arr1.add(addr);
+                                arr2.add(email);
+                                arr2.add(addr);
                                 multimap.replace(name,arr);
+                                multimap1.replace(email,arr1);
+                                multimap2.replace(num,arr2);
 
                             }else{
                                 System.out.println("The contact doesn't exist!!!");
@@ -92,17 +102,27 @@ public class ContactMain {
                             s.nextLine();
                             email=s.next();
                             if(multimap1.containsKey(email)){
+                                ArrayList<String> arr=new ArrayList<String>();
                                 ArrayList<String> arr1=new ArrayList<String>();
+                                ArrayList<String> arr2=new ArrayList<String>();
                                 System.out.println("enter the new name");
-                                name=s.nextLine();
+                                name=s.next();
                                 System.out.println("enter the new phone number");
-                                num=s.nextLine();
+                                num=s.next();
                                 System.out.println("enter the new address");
-                                addr=s.nextLine();
+                                addr=s.next();
                                 arr1.add(name);
                                 arr1.add(num);
                                 arr1.add(addr);
+                                arr.add(num);
+                                arr.add(email);
+                                arr.add(addr);
+                                arr2.add(name);
+                                arr2.add(email);
+                                arr2.add(addr);
+                                multimap.replace(name,arr);
                                 multimap1.replace(email,arr1);
+                                multimap2.replace(num,arr2);
 
                             }else{
                                 System.out.println("The contact doesn't exist!!!");
@@ -112,16 +132,26 @@ public class ContactMain {
                             s.nextLine();
                             num=s.next();
                             if(multimap2.containsKey(num)){
+                                ArrayList<String> arr=new ArrayList<String>();
+                                ArrayList<String> arr1=new ArrayList<String>();
                                 ArrayList<String> arr2=new ArrayList<String>();
                                 System.out.println("enter the new name ");
-                                name=s.nextLine();
+                                name=s.next();
                                 System.out.println("enter the new email ");
-                                email=s.nextLine();
+                                email=s.next();
                                 System.out.println("enter the new address");
-                                addr=s.nextLine();
+                                addr=s.next();
+                                arr1.add(name);
+                                arr1.add(num);
+                                arr1.add(addr);
+                                arr.add(num);
+                                arr.add(email);
+                                arr.add(addr);
                                 arr2.add(name);
                                 arr2.add(email);
                                 arr2.add(addr);
+                                multimap.replace(name,arr);
+                                multimap1.replace(email,arr1);
                                 multimap2.replace(num,arr2);
                             }else{
                                 System.out.println("The contact doesn't exist!!!");
@@ -184,7 +214,7 @@ public class ContactMain {
                         s.nextLine();
                         num=s.next();
                         if(multimap2.containsKey(num)){
-                            System.out.println(num+multimap.get(num));
+                            System.out.println(num+multimap2.get(num));
                         }else{
                             System.out.println("The contact doesn't exist!!!");
                         }
