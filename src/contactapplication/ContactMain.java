@@ -27,34 +27,35 @@ public class ContactMain {
                         name=s.next();
                         if(multimap.containsKey(name)){
                             System.out.println("the name already exists!!! please enter another name");
-                            name=s.next();
+                            break;
                         }else {
                             ar1.add(name);
                             ar2.add(name);
                         }
                             System.out.println("Enter the phone number ");
-                            num = s.nextLine();
+                            num = s.next();
                             if(multimap2.containsKey(num)){
                                 System.out.println("the number already exists!!! please enter another number");
-                                num=s.next();
+                                break;
                             }
                             else {
                                 ar.add(num);
                                 ar1.add(num);
                             }
                             System.out.println("Enter the email");
-                            email = s.nextLine();
+                            email = s.next();
                             if(multimap1.containsKey(email)){
                                 System.out.println("the email already exists!!! please enter another email");
-                                email=s.next();
+                                break;
                             }
                             else{
                                 ar.add(email);
-                                ar2.add(num);
+                                ar2.add(email);
                             }
 
                             System.out.println("Enter the address");
-                            addr = s.nextLine();
+                            s.nextLine();
+                            addr = s.next();
                             ar.add(addr);
                             ar1.add(addr);
                             ar2.add(addr);
