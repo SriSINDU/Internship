@@ -33,11 +33,10 @@ public class ContactMain {
                             ar2.add(name);
                         }
                             System.out.println("Enter the phone number ");
-                            s.nextLine();
                             num = s.nextLine();
                             if(multimap2.containsKey(num)){
                                 System.out.println("the number already exists!!! please enter another number");
-                                num=s.nextLine();
+                                num=s.next();
                             }
                             else {
                                 ar.add(num);
@@ -47,7 +46,7 @@ public class ContactMain {
                             email = s.nextLine();
                             if(multimap1.containsKey(email)){
                                 System.out.println("the email already exists!!! please enter another email");
-                                email=s.nextLine();
+                                email=s.next();
                             }
                             else{
                                 ar.add(email);
@@ -221,6 +220,8 @@ public class ContactMain {
                     }
                         break;
                 case 5: System.out.println(multimap);
+                        System.out.println(multimap1);
+                        System.out.println(multimap2);
                 case 6:
             }
         }while(ch !=6);
