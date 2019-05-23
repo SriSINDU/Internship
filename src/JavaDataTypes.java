@@ -3,26 +3,31 @@ public class JavaDataTypes {
     public static void main(String args[]){
         int t,len;
         String n;
+        String s1="-";
         Scanner s=new Scanner(System.in);
         t=s.nextInt();
         for(int i=0;i<t;i++){
             n=s.next();
+            String s2=Character.toString(n.charAt(0));
             len=n.length();
+            if(s1.equals(s2)){
+                len--;
+            }
             if(len>20){
                 System.out.println(n+" can't be fitted anywhere.");
             }
             else {
                 System.out.println(n+" can be fitted in: ");
-                if(len<=4){
+                if(len<4){
                     System.out.println("* byte\n* short\n* int\n* long");
                 }
-                else if(len<=7){
+                else if(len<6){
                     System.out.println("* short\n* int \n* long");
                 }
-                else if(len<=11){
+                else if(len<11){
                     System.out.println("* int\n* long");
                 }
-                else if(len<=20){
+                else if(len<20){
                     System.out.println("* long");
                 }
             }

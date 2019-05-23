@@ -18,12 +18,13 @@ public class ContactMain {
         do{
             System.out.println(" Enter any one of the options\n1.Create new Contact\n2.Update Contact\n3.Delete Contact\n4.Search Contact\n5.Display Contacts\n6.Exit");
             ch=s.nextInt();
+            s.nextLine();
             switch (ch){
                 case 1:ArrayList<String> ar=new ArrayList<String>();
                         ArrayList<String> ar1=new ArrayList<String>();
                         ArrayList<String> ar2=new ArrayList<String>();
                         System.out.println("Enter the contact details: \nEnter the name  ");
-                        s.nextLine();
+                       // s.nextLine();
                         name=s.next();
                         if(multimap.containsKey(name)){
                             System.out.println("the name already exists!!! please enter again");
@@ -262,8 +263,8 @@ public class ContactMain {
                     }
                         break;
                 case 5: System.out.println(multimap);
-                        //System.out.println(multimap1);
-                       // System.out.println(multimap2);
+                        System.out.println(multimap1);
+                        System.out.println(multimap2);
                 case 6:
             }
         }while(ch !=6);
