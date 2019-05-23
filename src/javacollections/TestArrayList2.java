@@ -21,6 +21,7 @@ public class TestArrayList2 {
         al.add(s1);//adding Student class object
         al.add(s2);
         al.add(s3);
+        System.out.println(al.get(0).toString());
         //Getting Iterator
         Iterator itr=al.iterator();
         //traversing elements of ArrayList object
