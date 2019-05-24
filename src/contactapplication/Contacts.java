@@ -1,7 +1,7 @@
 package contactapplication;
 import java.util.*;
 import java.lang.*;
-
+import java.io.*;
 public class Contacts {
 
     public static void main(String[] args){
@@ -10,6 +10,17 @@ public class Contacts {
         String num,addr,name,email,name1,num1,email1,addr1;
         Map<Integer, List<String>> map1 = new HashMap<Integer, List<String>>();
         Map<String, Integer> map2=new HashMap<String,Integer>();
+        HashMap<Integer,List<String>> mapp1=null;
+        HashMap<String,Integer> mapp2 = null;
+        try{
+            FileInputStream fis = new FileInputStream("contactone.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            mapp1 = (HashMap) ois.readObject();
+            mapp2=(HashMap) ois.readObject();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
         Scanner s=new Scanner(System.in);
         do{
             System.out.println(" Enter any one of the options\n1.Create new Contact\n2.Update Contact\n3.Delete Contact\n4.Search Contact\n5.Exit");
@@ -335,7 +346,17 @@ public class Contacts {
                             }
                         }
                         break;
-                case 5:
+                case 5: try{
+                    FileOutputStream fos = new FileOutputStream("contactone.ser");
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(mapp2);
+                    oos.writeObject(mapp1);
+                    oos.close();
+                    fos.close();
+
+                }catch(Exception e){
+                    System.out.println(e.getStackTrace());
+                }
             }
         }while(ch!=5);
     }
