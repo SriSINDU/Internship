@@ -67,9 +67,10 @@ public class ContactMain {
 
                 case 2:System.out.println("on what basis you want to update enter that option!!\n 1.name 2.email 3.phone");
                         subch=s.nextInt();
+                        s.nextLine();
                         if(subch==1){
                             System.out.println("enter the name");
-                            s.nextLine();
+                            //s.nextLine();
                             name=s.next();
                             if(multimap.containsKey(name)){
                                 ArrayList<String> arr=new ArrayList<String>();
@@ -107,7 +108,7 @@ public class ContactMain {
                             }
                         }else if(subch==2){
                             System.out.println("enter the email");
-                            s.nextLine();
+                            //s.nextLine();
                             email=s.next();
                             if(multimap1.containsKey(email)){
                                 ArrayList<String> arr=new ArrayList<String>();
