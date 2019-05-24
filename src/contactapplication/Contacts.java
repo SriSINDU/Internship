@@ -4,7 +4,6 @@ import java.lang.*;
 
 public class Contacts {
 
-
     public static void main(String[] args){
         int id,id1,ch,subch;
         id=1;
@@ -113,10 +112,8 @@ public class Contacts {
                                 System.out.println("The name doesnot exist!!! please try again");
                                 break;
                             }
-
                         }
                         if(subch==2){
-
                             System.out.println("enter the number");
                             num=s.next();
                             id1=map2.get(num);
@@ -232,9 +229,6 @@ public class Contacts {
                                 System.out.println("The email doesnot exist!!! please try again");
                                 break;
                             }
-
-
-
                         }
                         break;
                 case 3: System.out.println("on what basis you want to delete 1.name 2.number 3.email");
