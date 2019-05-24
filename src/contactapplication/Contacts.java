@@ -47,9 +47,6 @@ public class Contacts {
                         }
                          System.out.println("enter the address ");
                          addr=s.next();
-                         ar.add(name);
-                         ar.add(num);
-                         ar.add(email);
                          ar.add(addr);
                          map1.put(id,ar);
                          map2.put(name,id);
@@ -72,6 +69,7 @@ public class Contacts {
                                     name1=s.next();
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
+                                    l.remove(name);
                                     l.set(0,name1);
                                     map2.remove(name);
                                     map2.put(name1,id1);
@@ -83,6 +81,7 @@ public class Contacts {
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
                                     num=l.get(1);
+                                    l.remove(num);
                                     l.set(1,num1);
                                     map2.remove(num);
                                     map2.put(num1,id1);
@@ -94,7 +93,8 @@ public class Contacts {
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
                                     email=l.get(2);
-                                    l.set(1,email1);
+                                    l.remove(email);
+                                    l.set(2,email1);
                                     map2.remove(email);
                                     map2.put(email1,id1);
                                     map1.replace(id1,l);
@@ -104,6 +104,7 @@ public class Contacts {
                                     addr1=s.next();
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
+                                    l.remove(addr1);
                                     l.set(3,addr1);
                                     map1.replace(id1,l);
                                 }
@@ -128,6 +129,7 @@ public class Contacts {
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
                                     name=l.get(0);
+                                    l.remove(name);
                                     l.set(0,name1);
                                     map2.remove(name);
                                     map2.put(name1,id1);
@@ -139,6 +141,7 @@ public class Contacts {
                                     num1=s.next();
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
+                                    l.remove(num);
                                     l.set(1,num1);
                                     map2.remove(num);
                                     map2.put(num1,id1);
@@ -150,7 +153,8 @@ public class Contacts {
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
                                     email=l.get(2);
-                                    l.set(1,email1);
+                                    l.remove(email);
+                                    l.set(2,email1);
                                     map2.remove(email);
                                     map2.put(email1,id1);
                                     map1.replace(id1,l);
@@ -160,6 +164,7 @@ public class Contacts {
                                     addr1=s.next();
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
+                                    l.remove(3);
                                     l.set(3,addr1);
                                     map1.replace(id1,l);
                                 }
@@ -183,6 +188,7 @@ public class Contacts {
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
                                     name=l.get(0);
+                                    l.remove(name);
                                     l.set(0,name1);
                                     map2.remove(name);
                                     map2.put(name1,id1);
@@ -195,6 +201,7 @@ public class Contacts {
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
                                     num=l.get(1);
+                                    l.remove(num);
                                     l.set(1,num1);
                                     map2.remove(num);
                                     map2.put(num1,id1);
@@ -205,7 +212,8 @@ public class Contacts {
                                     email1=s.next();
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
-                                    l.set(1,email1);
+                                    l.remove(email);
+                                    l.set(2,email1);
                                     map2.remove(email);
                                     map2.put(email1,id1);
                                     map1.replace(id1,l);
@@ -215,6 +223,7 @@ public class Contacts {
                                     addr1=s.next();
                                     List<String> l=new ArrayList<>();
                                     l=map1.get(id1);
+                                    l.remove(3);
                                     l.set(3,addr1);
                                     map1.replace(id1,l);
                                 }
