@@ -89,6 +89,17 @@ public class Contacts {
                          mapp2.put(num,id);
                          mapp2.put(email,id);
                          id++;
+                    try{
+                        FileOutputStream fos = new FileOutputStream("contactapp.ser");
+                        ObjectOutputStream oos = new ObjectOutputStream(fos);
+                        oos.writeObject(mapp1);
+                        oos.writeObject(mapp2);
+                        oos.close();
+                        fos.close();
+
+                    }catch(Exception e){
+                        System.out.println(e.getStackTrace());
+                    }
                          break;
                 case 2: System.out.println("on what basis you want to update enter that option!!\n 1.name 2.phone 3.email");
                         subch=s.nextInt();
