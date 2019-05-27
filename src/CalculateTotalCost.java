@@ -8,6 +8,6 @@ public class CalculateTotalCost {
         tip=s.nextInt();
         tax=s.nextInt();
         totalcost=mealcost+((mealcost*tip)/100)+((mealcost*tax)/100);
-        System.out.println(totalcost);
+        System.out.println((int)totalcost);
     }
 }
