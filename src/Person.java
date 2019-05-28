@@ -32,6 +32,8 @@ public class Person {
              Person p=new Person(ag);
              p.amIOld();
              p.yearPasses();
+             p.yearPasses();
+             p.yearPasses();
              p.amIOld();
 
 
