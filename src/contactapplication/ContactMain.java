@@ -2,7 +2,6 @@ package contactapplication;
 import java.util.*;
 import java.lang.*;
 
-import static javafx.application.Platform.exit;
 import java.util.*;
 public class ContactMain {
 
